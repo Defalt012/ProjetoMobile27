@@ -5,7 +5,7 @@
              BackgroundImage="fundo">
     <ContentPage.Content>
         <StackLayout>
-            
+            <!--ta foda -->
             <StackLayout Orientation="Horizontal">
                 <Button Text="Casa"
                     BackgroundColor="#099E00"
