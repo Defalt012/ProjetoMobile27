@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.TTamanhoResidencia"
+             BackgroundImage="fundo">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Casa"
+                    BackgroundColor="#099E00"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,50,5,0"
+                    x:Name="buttonCasa"
+                    BorderRadius="10"/>
+                <Button Text="Apartamento"
+                    BackgroundColor="#099E00"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,50,5,0"
+                    x:Name="buttonApartamento"
+                    BorderRadius="10"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Medida1"
+                    BackgroundColor="#9E005C"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,110,5,0"
+                    x:Name="buttonMedida1"
+                    BorderRadius="10"/>
+                <Button Text="Medida2"
+                    BackgroundColor="#9E005C"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,110,5,0"
+                    x:Name="buttonMedida2"
+                    BorderRadius="10"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Medida3"
+                    BackgroundColor="#9E005C"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,25,5,0"
+                    x:Name="buttonMedida3"
+                    BorderRadius="10"/>
+                <Button Text="Medida4"
+                    BackgroundColor="#9E005C"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,25,5,0"
+                    x:Name="buttonMedida4"
+                    BorderRadius="10"/>
+
+            </StackLayout>
+            <Label x:Name="labelResultado"
+                   Margin="70"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   Text="?"/>
+            <Button Text="Proximo"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="End"
+                    Margin="5,0,25,0"
+                    x:Name="buttonProximo"
+                    BorderRadius="10"/>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.TContaUsuario"
+             BackgroundImage="fundo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Conta"
+             HorizontalOptions="Center"
+             Margin="5,0,5,0"
+             FontSize="20"
+             TextColor="#EED218"/>
+
+
+            <Entry x:Name="entryNome"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="25,50,25,0"/>
+            <Entry x:Name="entryEmail"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="25,50,25,0"/>
+            <Entry x:Name="entrySenha"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="25,50,25,0"/>
+            <Entry x:Name="entryID"
+                   IsVisible="False"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="buttonApagar"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,150,0,0"
+                        BorderColor="Transparent"
+                        Text="Apagar"
+                        Clicked="ButtonApagar_Clicked"/>
+
+                <Button x:Name="buttonAlterar"
+                        HorizontalOptions="FillAndExpand"
+                        BorderColor="AliceBlue"
+                        Margin="0,150,0,0"
+                        Text="Atualizar"
+                        Clicked="ButtonAlterar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

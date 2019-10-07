@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.MenuStrip">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <ContentPage.Content>
+                <StackLayout>
+                    <TableView Intent="Menu">
+                        <TableSection>
+                            <ViewCell x:Name="PaginaLimpar"
+                                      Tapped="PaginaLimpar_Tapped">
+                                <Label Text="Limpar"
+                                       HorizontalTextAlignment="Center"/>
+
+                            </ViewCell>
+
+                            <ViewCell x:Name="PaginaParticipar" Tapped="PaginaParticipar_Tapped">
+
+                                <Label Text="Serviço"
+                                       HorizontalTextAlignment="Center"/>
+
+                            </ViewCell>
+
+                            <ViewCell x:Name="PaginaPedido"
+                                      Tapped="PaginaPedido_Tapped">
+                                <Label Text="+ Pedido"
+                                       HorizontalOptions="Center"/>
+
+                            </ViewCell>
+
+                            <ViewCell x:Name="PaginaConta"
+                                      Tapped="PaginaConta_Tapped">
+
+                                <Label Text="Conta"
+                                       HorizontalTextAlignment="Center"/>
+
+                            </ViewCell>
+
+
+
+                        </TableSection>
+                    </TableView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+</MasterDetailPage>

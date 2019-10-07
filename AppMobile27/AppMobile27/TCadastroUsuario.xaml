@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.Vi"
+             BackgroundImage="fundo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Criar Conta"
+               FontSize="30"
+               Margin="10,30,0,0"
+               HorizontalOptions="Center"/>
+            <Entry x:Name="entryNomePessoa"
+                   Placeholder="Dígite o seu nome"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,70,0,0"/>
+
+            <Entry x:Name="entryNomeUsuario"
+                   Placeholder="Dígite um nome de usuario"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,5,0,0"/>
+
+            <Entry x:Name="entryEmail"
+                   Placeholder="Dígite o seu E-mail"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,5,0,0"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="entrySenha"
+                   Placeholder="Senha"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   IsPassword="True"
+                   Margin="1,5,0,0"/>
+                <Entry x:Name="entryCEP"
+                   Placeholder="CEP"
+                   Keyboard="Numeric"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="1,5,0,0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Criar"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,20,5,0"
+                    x:Name="buttonCadastrar"
+                    BorderRadius="8"
+                    Clicked="ButtonCadastrar_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

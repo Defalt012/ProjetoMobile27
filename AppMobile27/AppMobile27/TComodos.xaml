@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.TComodos"
+             BackgroundImage="fundo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Cômodos"
+             HorizontalOptions="Center"
+             Margin="5,30,5,0"
+             FontSize="20"
+             TextColor="#EED218"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair1"
+                        TextColor="#EED218"/>
+                <Button Text="QUARTO"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"/>
+                <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma1"
+                        TextColor="#EED218"/>
+            </StackLayout>
+
+            <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="labelQuarto"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair2"
+                        TextColor="#EED218"/>
+                <Button Text="BANHEIRO"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"/>
+                <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma2"
+                        TextColor="#EED218"/>
+            </StackLayout>
+
+            <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="labelBanheiro"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair3"
+                        TextColor="#EED218"/>
+                <Button Text="SALA"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"/>
+                <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma3"
+                        TextColor="#EED218"/>
+            </StackLayout>
+
+            <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="labelSala"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair4"
+                        TextColor="#EED218"/>
+                <Button Text="COZINHA"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"/>
+                <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma4"
+                        TextColor="#EED218"/>
+            </StackLayout>
+            <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="labelCozinha"/>
+
+
+            <ImageButton Margin="0,70,0,0"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

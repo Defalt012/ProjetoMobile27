@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.TCadastroEmpregados"
+             BackgroundImage="fundo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Conta"
+             HorizontalOptions="Center"
+             Margin="5,70,10,0"
+             FontSize="20"/>
+
+            
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="entryCPF"
+                 HorizontalOptions="FillAndExpand"
+                 Placeholder="RG"
+                 Margin="5,70,10,0"
+                 HorizontalTextAlignment="Center"
+                 Keyboard="Numeric"/>
+
+                <Entry x:Name="entryRG"
+                 HorizontalOptions="FillAndExpand"
+                 Placeholder="CPF"
+                 Margin="5,70,10,0"
+                 HorizontalTextAlignment="Center"
+                 Keyboard="Numeric"/>
+
+            </StackLayout>
+            <Entry x:Name="entryCep"
+                 HorizontalOptions="FillAndExpand"
+                 Placeholder="CEP"
+                 HorizontalTextAlignment="Center"
+                 Keyboard="Numeric"/>
+
+            <Entry x:Name="entryInformacoes"
+                 HorizontalOptions="FillAndExpand"
+                 Placeholder="Informações"
+                 HorizontalTextAlignment="Center"/>
+
+            <Button Text="Cadastrar"
+                    BackgroundColor="#FF2950"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,25,5,0"
+                    x:Name="buttonCadastrar"
+                    BorderRadius="25"
+                    Clicked="ButtonCadastrar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

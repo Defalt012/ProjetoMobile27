@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppMobile27"
+             x:Class="AppMobile27.MainPage"
+             BackgroundImage="fundo">
+
+    <StackLayout>
+        
+        <Label Text="Login"
+               FontSize="30"
+               Margin="10"
+               HorizontalOptions="Center"/>
+
+        <Entry x:Name="entryNome"
+                   Placeholder="Nome do usuario"
+                   HorizontalTextAlignment="Center"
+                   Margin="10,100,0,0"/>
+
+        <Entry x:Name="entrySenha"
+                   Placeholder="Dígite a Senha"
+                   IsPassword="True"
+                   HorizontalTextAlignment="Center"
+                   Margin="10,20,0,0"/>
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button Text="Logar"
+                    BackgroundColor="#FF2950"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,25,5,0"
+                    x:Name="buttonLogar"
+                    BorderRadius="25"
+                    Clicked="ButtonLogar_Clicked"/>
+
+        </StackLayout>
+
+        <Button Text="Criar conta"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,120,5,0"
+                    x:Name="buttonCriarConta"
+                    BorderWidth="10"
+                    Clicked="ButtonCriarConta_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
