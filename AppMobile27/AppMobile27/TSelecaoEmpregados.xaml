@@ -5,9 +5,33 @@
              BackgroundImage="fundo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Seleção de Empregado"
+                   HorizontalOptions="Center"
+                   Margin="10,20,10,20"
+                   FontSize="30"
+                   TextColor="#0DFFBB"/>
+
+            <StackLayout Orientation="Horizontal">
+                <TimePicker TextColor="White"
+                            HorizontalOptions="Fill"
+                            Margin="10,0,10,0"/>
+                <Picker x:Name="pickerEmpregado"
+                        Title="Selecione o Empregado(a)">
+                    <Picker.Items>
+                        <x:String></x:String>
+                        
+                    </Picker.Items>
+                    
+                </Picker>
+                
+            </StackLayout>
+            <Label x:Name="labelSobre"
+                   Margin="10,50,50,10"
+                   HorizontalOptions="FillAndExpand"
+                   FontSize="19"
+                   TextColor="Black"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -16,16 +16,19 @@ namespace AppMobile27
 		{
 			InitializeComponent ();
             Detail = new NavigationPage(new TMenu());
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void PaginaPedido_Tapped(object sender, EventArgs e)
         {
-
+            Detail = new NavigationPage(new TComodos());
+            IsPresented = false;
         }
 
         private void PaginaConta_Tapped(object sender, EventArgs e)
         {
-
+            Detail = new NavigationPage(new TContaUsuario());
+            IsPresented = false;
         }
 
         private void PaginaLimpar_Tapped(object sender, EventArgs e)
@@ -35,7 +38,8 @@ namespace AppMobile27
 
         private void PaginaParticipar_Tapped(object sender, EventArgs e)
         {
-
+            Detail = new NavigationPage(new TCadastroEmpregados());
+            IsPresented = false;
         }
     }
 }

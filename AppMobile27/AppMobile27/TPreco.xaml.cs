@@ -15,7 +15,8 @@ namespace AppMobile27
 		public TPreco ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         private void ButtonFinalizar_Clicked(object sender, EventArgs e)
         {

@@ -15,6 +15,7 @@ namespace AppMobile27
 		public TComodos ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 	}
 }

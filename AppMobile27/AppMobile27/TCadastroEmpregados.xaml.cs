@@ -15,7 +15,8 @@ namespace AppMobile27
 		public TCadastroEmpregados ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         private void ButtonCadastrar_Clicked(object sender, EventArgs e)
         {

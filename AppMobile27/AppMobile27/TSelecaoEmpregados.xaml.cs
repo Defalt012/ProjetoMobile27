@@ -15,6 +15,7 @@ namespace AppMobile27
 		public TSelecaoEmpregados ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 	}
 }

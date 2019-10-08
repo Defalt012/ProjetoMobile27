@@ -9,7 +9,7 @@
              HorizontalOptions="Center"
              Margin="5,30,5,0"
              FontSize="20"
-             TextColor="#EED218"/>
+             TextColor="#0DFFBB"/>
 
             <StackLayout Orientation="Horizontal">
                 <Button Text="-"
@@ -18,11 +18,12 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair1"
-                        TextColor="#EED218"/>
+                        TextColor="#0D3FFF"/>
                 <Button Text="QUARTO"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
+                    TextColor="Black"
                     FontSize="15"/>
                 <Button Text="+"
                     BackgroundColor="Transparent"
@@ -30,12 +31,13 @@
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma1"
-                        TextColor="#EED218"/>
+                        TextColor="#0D3FFF"/>
             </StackLayout>
 
             <Label Text="(1)"
                    HorizontalOptions="CenterAndExpand"
-                   x:Name="labelQuarto"/>
+                   x:Name="labelQuarto"
+                   TextColor="Black"/>
 
             <StackLayout Orientation="Horizontal">
                 <Button Text="-"
@@ -44,11 +46,12 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair2"
-                        TextColor="#EED218"/>
+                        TextColor="#0D3FFF"/>
                 <Button Text="BANHEIRO"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
+                    TextColor="Black"
                     FontSize="15"/>
                 <Button Text="+"
                     BackgroundColor="Transparent"
@@ -56,12 +59,13 @@
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma2"
-                        TextColor="#EED218"/>
+                        TextColor="#0D3FFF"/>
             </StackLayout>
 
             <Label Text="(1)"
                    HorizontalOptions="CenterAndExpand"
-                   x:Name="labelBanheiro"/>
+                   x:Name="labelBanheiro"
+                   TextColor="Black"/>
 
             <StackLayout Orientation="Horizontal">
                 <Button Text="-"
@@ -70,11 +74,12 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair3"
-                        TextColor="#EED218"/>
+                    TextColor="#0D3FFF"/>
                 <Button Text="SALA"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
+                    TextColor="Black"
                     FontSize="15"/>
                 <Button Text="+"
                     BackgroundColor="Transparent"
@@ -82,11 +87,12 @@
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma3"
-                        TextColor="#EED218"/>
+                    TextColor="#0D3FFF"/>
             </StackLayout>
 
             <Label Text="(1)"
                    HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
                    x:Name="labelSala"/>
 
             <StackLayout Orientation="Horizontal">
@@ -96,11 +102,12 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair4"
-                        TextColor="#EED218"/>
+                        TextColor="#0D3FFF"/>
                 <Button Text="COZINHA"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
+                    TextColor="Black"
                     FontSize="15"/>
                 <Button Text="+"
                     BackgroundColor="Transparent"
@@ -108,14 +115,33 @@
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma4"
-                        TextColor="#EED218"/>
+                        TextColor="#0D3FFF"/>
             </StackLayout>
             <Label Text="(1)"
                    HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
                    x:Name="labelCozinha"/>
+            
+            <StackLayout  Orientation="Horizontal">
+
+                <!--<Grid>
+                <Caledar Height="170" HorizontalAlignment="Left" Margin="58,32,0,0"   
+                Name="calendar1" VerticalAlignment="Top" Width="180" />
+            </Grid>-->
+                <Picker x:Name="pickerEmpregado"
+                        Title="Selecione o Empregado(a)"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="90,30,90,30">
+                    <Picker.Items>
+                        <x:String></x:String>
+
+                    </Picker.Items>
+
+                </Picker>
+            </StackLayout>
 
 
-            <ImageButton Margin="0,70,0,0"/>
+        <ImageButton Margin="0,70,0,0"/>
 
 
         </StackLayout>

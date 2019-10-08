@@ -12,6 +12,7 @@ namespace AppMobile27
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void ButtonLogar_Clicked(object sender, EventArgs e)

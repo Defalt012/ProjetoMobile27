@@ -15,6 +15,7 @@ namespace AppMobile27
 		public TMenu ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 	}
 }

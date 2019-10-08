@@ -15,7 +15,8 @@ namespace AppMobile27
 		public TContaUsuario ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         private void ButtonAlterar_Clicked(object sender, EventArgs e)
         {
