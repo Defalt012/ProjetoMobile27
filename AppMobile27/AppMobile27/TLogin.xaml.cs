@@ -22,6 +22,7 @@ namespace AppMobile27
 
         private void ButtonCriarConta_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new TContaUsuario());
 
         }
     }
