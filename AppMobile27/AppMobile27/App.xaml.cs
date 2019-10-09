@@ -45,7 +45,7 @@ namespace AppMobile27
 
             InitializeComponent();
 
-            MainPage = new NavigationPage  (new MenuStrip());
+            MainPage = new NavigationPage  (new MainPage());
             NavigationPage.SetHasNavigationBar(this, false);
         }
 

@@ -121,27 +121,76 @@
                    HorizontalOptions="CenterAndExpand"
                    TextColor="Black"
                    x:Name="labelCozinha"/>
-            
+
             <StackLayout  Orientation="Horizontal">
 
-                <!--<Grid>
-                <Caledar Height="170" HorizontalAlignment="Left" Margin="58,32,0,0"   
-                Name="calendar1" VerticalAlignment="Top" Width="180" />
-            </Grid>-->
+
                 <Picker x:Name="pickerEmpregado"
                         Title="Selecione o Empregado(a)"
                         HorizontalOptions="FillAndExpand"
-                        Margin="90,30,90,30">
+                        Margin="10, 5, 10, 5"
+                        TextColor="Black">
                     <Picker.Items>
-                        <x:String></x:String>
+
+                        <x:String>8:00 Horas</x:String>
+                        <x:String>9:00 Horas</x:String>
+                        <x:String>10:00 Horas</x:String>
+                        <x:String>11:00 Horas</x:String>
+                        <x:String>12:00 Horas</x:String>
+                        <x:String>13:00 Horas</x:String>
+                        <x:String>14:00 Horas</x:String>
+                        <x:String>15:00 Horas</x:String>
+                        <x:String>16:00 Horas</x:String>
+                        <x:String>17:00 Horas</x:String>
+                        <x:String>18:00 Horas</x:String>
+                        <x:String>19:00 Horas</x:String>
 
                     </Picker.Items>
+                </Picker>
 
+                <Picker x:Name="pickerDia"
+                        Title="Selecione o Dia(a)"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="10, 5, 10, 5"
+                        TextColor="Black">
+                    <Picker.Items>
+
+                        <x:String>01/10/2019</x:String>
+                        <x:String>02/10/2019</x:String>
+                        <x:String>03/10/2019</x:String>
+                        <x:String>04/10/2019</x:String>
+                        <x:String>05/10/2019</x:String>
+                        <x:String>06/10/2019</x:String>
+                        <x:String>07/10/2019</x:String>
+                        <x:String>08/10/2019</x:String>
+                        <x:String>09/10/2019</x:String>
+                        <x:String>10/10/2019</x:String>
+                        <x:String>11/10/2019</x:String>
+                        <x:String>13/10/2019</x:String>
+                        <x:String>14/10/2019</x:String>
+                        <x:String>15/10/2019</x:String>
+                        <x:String>16/10/2019</x:String>
+                        <x:String>17/10/2019</x:String>
+                        <x:String>18/10/2019</x:String>
+                        <x:String>19/10/2019</x:String>
+                        <x:String>20/10/2019</x:String>
+                        <x:String>21/10/2019</x:String>
+                        <x:String>22/10/2019</x:String>
+                        <x:String>23/10/2019</x:String>
+                        <x:String>24/10/2019</x:String>
+                        <x:String>25/10/2019</x:String>
+                        <x:String>26/10/2019</x:String>
+                        <x:String>27/10/2019</x:String>
+                        <x:String>28/10/2019</x:String>
+                        <x:String>29/10/2019</x:String>
+                        <x:String>30/10/2019</x:String>
+                        <x:String>31/10/2019</x:String>
+                    </Picker.Items>
                 </Picker>
             </StackLayout>
 
 
-        <ImageButton Margin="0,70,0,0"/>
+            <ImageButton Margin="0,70,0,0"/>
 
 
         </StackLayout>

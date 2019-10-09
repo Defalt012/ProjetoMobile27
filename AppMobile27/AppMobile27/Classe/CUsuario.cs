@@ -59,18 +59,28 @@ namespace AppMobile27.Classe
             }
         }
 
-        public bool Login(string Nome, string Senha)
+        public bool Login(string Usuario, string Senha)
         {
             try
             {
-                var query = $"SELECT COUNT (*) FROM Login WHERE  Usuario = '{Nome}' and Senha = '{Senha}'";
-                ((App)Application.Current).Conexao.Execute(query);
-                return true;
+                var query = $"SELECT COUNT (*) FROM Login WHERE  Usuario = '{Usuario}' and Senha = '{Senha}'";
+                var resultadoSQL = ((App)Application.Current).Conexao.Query<ModelUsuario>(query);
+
+                if (resultadoSQL.Count == 1)
+                {
+                    
+                    return true;
+                }
+                else
+                {
+                    
+                    return false;
+                }
             }
             catch (Exception ex)
             {
                 throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
-
+                
 
             }
         }

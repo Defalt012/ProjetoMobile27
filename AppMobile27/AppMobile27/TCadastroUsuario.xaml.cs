@@ -20,23 +20,23 @@ namespace AppMobile27
 
         private void ButtonCadastrar_Clicked(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(entryNomePessoa.Text)||
-            //   string.IsNullOrEmpty(entryNomeUsuario.Text)||
-            //   string.IsNullOrEmpty(entrySenha.Text)||
-            //   string.IsNullOrEmpty(entryEmail.Text)||
-            //   string.IsNullOrEmpty(entryCEP.Text))
+            if (!string.IsNullOrEmpty(entryNomePessoa.Text) ||
+               !string.IsNullOrEmpty(entryNomeUsuario.Text) ||
+               !string.IsNullOrEmpty(entrySenha.Text) ||
+               !string.IsNullOrEmpty(entryEmail.Text) ||
+               !string.IsNullOrEmpty(entryCEP.Text))
 
-            
-            //{
+
+            {
                 Classe.CUsuario CU = new Classe.CUsuario();
                 bool Resultado = CU.CadastrarUsuario(entryNomePessoa.Text, entryNomeUsuario.Text, entryEmail.Text, entrySenha.Text, entryCEP.Text);
                 Navigation.PushAsync(new MainPage());
 
-            //}
-            //else
-            //{
-            //    DisplayAlert("Erro","°Não deixe os campos vazios !!!","OK");
-            //}
+            }
+            else
+            {
+                DisplayAlert("Erro", "°Não deixe os campos vazios !!!", "OK");
+            }
         }
     }
 }
