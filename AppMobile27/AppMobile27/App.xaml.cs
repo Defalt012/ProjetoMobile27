@@ -15,19 +15,20 @@ namespace AppMobile27
             var Banco = Pasta.CreateFile("BancoX.db", PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
             Conexao = new SQLite.SQLiteConnection(Banco.Path);
 
-            Conexao.Execute("CREATE TABLE IF NOT EXISTS Login (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE" +
-                ", nome TEXT (300) NOT NULL," +
-                " usuario TEXT (500) NOT NULL UNIQUE," +
-                " email TEXT (300) NOT NULL UNIQUE," +
-                " senha TEXT (255) NOT NULL," +
-                " cep INTEGER (8) NOT NULL)");
+            Conexao.Execute("CREATE TABLE IF NOT EXISTS Login (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE" +
+                ",Nome TEXT (300) NOT NULL," +
+                " Usuario TEXT (500) NOT NULL UNIQUE," +
+                " Email TEXT (300) NOT NULL UNIQUE," +
+                " Senha TEXT (255) NOT NULL," +
+                " CEP INTEGER (8) NOT NULL)");
 
             
             
 
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage  (new MainPage());
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnStart()

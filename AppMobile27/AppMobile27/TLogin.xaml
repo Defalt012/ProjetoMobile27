@@ -24,9 +24,18 @@
                    Margin="10,20,0,0"/>
 
         <StackLayout Orientation="Horizontal">
+            <Button Text="Criar conta"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    BorderColor="Transparent"
+                    Margin="5,25,5,0"
+                    x:Name="buttonCriarConta"
+                    BorderWidth="10"
+                    Clicked="ButtonCriarConta_Clicked"/>
 
             <Button Text="Logar"
-                    BackgroundColor="#FF2950"
+                    TextColor="White"
+                    BackgroundColor="#0DFFBB"
                     HorizontalOptions="FillAndExpand"
                     Margin="5,25,5,0"
                     x:Name="buttonLogar"
@@ -35,12 +44,7 @@
 
         </StackLayout>
 
-        <Button Text="Criar conta"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="5,120,5,0"
-                    x:Name="buttonCriarConta"
-                    BorderWidth="10"
-                    Clicked="ButtonCriarConta_Clicked"/>
+        
 
     </StackLayout>
 

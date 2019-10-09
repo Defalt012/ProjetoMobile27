@@ -8,17 +8,16 @@ namespace AppMobile27.Classe
 {
     public class CUsuario
     {
-        
 
 
-        public bool CadastrarUsuario(string nome,string usuario,string email, string senha, int cep)
+        public bool CadastrarUsuario(string Nome,string Usuario,string Email, string Senha, string CEP)
         {
 
             try
             {
 
 
-                var query = $"INSERT INTO Login (nome,usuario,email,senha,cep) VALUES ('{nome}','{usuario}','{email}','{senha}','{cep}')";
+                var query = $"INSERT INTO Login (Nome,Usuario,Email,Senha,CEP) VALUES ('{Nome}','{Usuario}','{Email}','{Senha}','{CEP}')";
                 ((App)Application.Current).Conexao.Execute(query);
 
                 return true;
@@ -29,11 +28,11 @@ namespace AppMobile27.Classe
 
             }
         }
-        public bool Update(string nome, string usuario, string email, string senha, int cep, int id)
+        public bool Update(string Nome, string Usuario, string Email, string Senha, string CEP, int ID)
         {
             try
             {
-                var query = $"UPDATE Login SET nome = '{nome}', usuario = '{usuario}', email = '{email}', senha = '{senha}',cep = '{cep}'  WHERE id = {id}";
+                var query = $"UPDATE Login SET Nome = '{Nome}', Usuario = '{Usuario}', Email = '{Email}', Senha = '{Senha}',CEP = '{CEP}'  WHERE ID = {ID}";
                 ((App)Application.Current).Conexao.Execute(query);
 
                 return true;
@@ -43,16 +42,44 @@ namespace AppMobile27.Classe
                 throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
             }
         }
-        public bool DeleteItem(int id)
+
+        public bool DeleteItem(int ID)
         {
             try
             {
-                var query = $"DELETE FROM Login WHERE id = {id}";
+                var query = $"DELETE FROM Login WHERE ID = {ID}";
                 ((App)Application.Current).Conexao.Execute(query);
                 return true;
             }
             catch (Exception ex)
             {
                 throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
+
+
             }
-}   }   }
+        }
+
+        public bool Login(string Nome, string Senha)
+        {
+            try
+            {
+                var query = $"SELECT COUNT (*) FROM Login WHERE  Usuario = '{Nome}' and Senha = '{Senha}'";
+                ((App)Application.Current).Conexao.Execute(query);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
+
+
+            }
+        }
+}   }
+
+
+
+
+
+
+
+
