@@ -12,8 +12,8 @@ namespace AppMobile27
         public App()
         {
             var Pasta = new LocalRootFolder();
-            var Banco = Pasta.CreateFile("BancoX.db", PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
-            Conexao = new SQLite.SQLiteConnection(Banco.Path);
+            var Arquivo = Pasta.CreateFile("BancoX.db", PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
+            Conexao = new SQLite.SQLiteConnection(Arquivo.Path);
 
             Conexao.Execute("CREATE TABLE IF NOT EXISTS Login (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE" +
                 ",Nome TEXT (300) NOT NULL," +
@@ -22,12 +22,30 @@ namespace AppMobile27
                 " Senha TEXT (255) NOT NULL," +
                 " CEP INTEGER (8) NOT NULL)");
 
-            
-            
+            Conexao.Execute("CREATE TABLE IF NOT EXISTS Pedido (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE" +
+                ",Quarto INTEGER NOT NULL" +
+                ",Banheiro INTEGER NOT NULL" +
+                ",Cozinha INTEGER NOT NULL" +
+                ",Sala INTEGER NOT NULL" +
+                ",Data TEXT (10) NOT NULL" +
+                ",Hora TEXT (10) NOT NULL" +
+                ",Empregado TEXT (300) NOT NULL" +
+                ",Total INTEGER NOT NULL)");
+
+            Conexao.Execute("CREATE TABLE IF NOT EXISTS Funcionario (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE" +
+                ",CPF TEXT (11) NOT NULL" +
+                ",CEP TEXT (8) NOT NULL" +
+                ",RG TEXT (12) NOT NULL" +
+                ",Observacao TEXT (300) NOT NULL)");
+                
+
+
+
+
 
             InitializeComponent();
 
-            MainPage = new NavigationPage  (new MainPage());
+            MainPage = new NavigationPage  (new MenuStrip());
             NavigationPage.SetHasNavigationBar(this, false);
         }
 

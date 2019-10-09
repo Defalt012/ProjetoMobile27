@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile27.TPedido">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView Orientation="Horizontal">
+                
+                
+            
+
+                <StackLayout>
+                        <Label Text="Cômodos"
+                 HorizontalOptions="Center"
+                 Margin="5,30,5,0"
+                 FontSize="20"
+                 TextColor="#0DFFBB"/>
+
+
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair1"
+                        TextColor="#0D3FFF"/>
+                        <Button Text="QUARTO"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    TextColor="Black"
+                    FontSize="15"/>
+                        <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma1"
+                    TextColor="#0D3FFF"/>
+                    </StackLayout>
+                    
+                    <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="labelQuarto"
+                   TextColor="Black"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair2"
+                        TextColor="#0D3FFF"/>
+                        <Button Text="BANHEIRO"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    TextColor="Black"
+                    FontSize="15"/>
+                        <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma2"
+                        TextColor="#0D3FFF"/>
+                    </StackLayout>
+                    
+                    <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   x:Name="labelBanheiro"
+                   TextColor="Black"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair3"
+                    TextColor="#0D3FFF"/>
+                        <Button Text="SALA"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    TextColor="Black"
+                    FontSize="15"/>
+                        <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma3"
+                    TextColor="#0D3FFF"/>
+                    </StackLayout>
+
+                    <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   x:Name="labelSala"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="-"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="20"
+                    x:Name="buttonSubtrair4"
+                        TextColor="#0D3FFF"/>
+                        <Button Text="COZINHA"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    TextColor="Black"
+                    FontSize="15"/>
+                        <Button Text="+"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,25,0,0"
+                    FontSize="15"
+                    x:Name="buttonSoma4"
+                        TextColor="#0D3FFF"/>
+                    </StackLayout>
+                    <Label Text="(1)"
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"
+                   x:Name="labelCozinha"/>
+
+                    <StackLayout  Orientation="Horizontal">
+
+                        <!--<Grid>-->
+                <!--<Caledar Height="170" HorizontalAlignment="Left" Margin="58,32,0,0"   
+                Name="calendar1" VerticalAlignment="Top" Width="180" />
+            </Grid>-->
+                        <Picker x:Name="pickerEmpregado"
+                        Title="Selecione o Empregado(a)"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="10, 0, 10, 0"
+                        TextColor="Black"/>
+                        <Picker.Items>
+                            
+                                    <x:String>10 Min</x:String>
+                                    <x:String>15 Min</x:String>
+                                    <x:String>20 Min</x:String>
+                                    <x:String>25 Min</x:String>
+                                    <x:String>30 Min</x:String>
+                                    <x:String>35 Min</x:String>
+                                    <x:String>40 Min</x:String>
+                                    <x:String>45 Min</x:String>
+                                    <x:String>50 Min</x:String>
+                                    <x:String>55 Min</x:String>
+                                    <x:String>1 Hora</x:String>
+                                    <x:String>1 Hora 15 Min</x:String>
+                                    <x:String>1 Hora 30 Min</x:String>
+                                    <x:String>2 Horas</x:String>
+                                    <x:String>2 Horas 50 Min</x:String>
+                                    <x:String>3 Horas</x:String>
+                                    <x:String>3 Horas 30 Min</x:String>
+                                    <x:String>4 Horas</x:String>
+                                    <x:String>5Horas</x:String>
+                                    <x:String>6Horas</x:String>
+                                    <x:String>7Horas</x:String>
+                                    <x:String>8Horas</x:String>
+                        </Picker.Items>
+                        </Picker>
+                       </StackLayout>
+
+                </StackLayout>
+           </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

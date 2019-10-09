@@ -21,7 +21,7 @@ namespace AppMobile27
 
         private void PaginaPedido_Tapped(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new TComodos());
+            Detail = new NavigationPage(new TPedido());
             IsPresented = false;
         }
 

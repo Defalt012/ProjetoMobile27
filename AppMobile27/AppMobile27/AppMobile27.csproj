@@ -43,11 +43,50 @@
     <EmbeddedResource Update="TMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="TPedido.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="TPreco.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="TSelecaoEmpregados.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MenuStrip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TCadastroEmpregados.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TCadastroUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TComodos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TContaUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TLogin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TPedido.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TPreco.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TSelecaoEmpregados.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

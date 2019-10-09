@@ -20,7 +20,8 @@ namespace AppMobile27
 
         private void ButtonCadastrar_Clicked(object sender, EventArgs e)
         {
-
+            Classe.CFuncionario CF = new Classe.CFuncionario();
+            bool Inserir = CF.Cadastrar(entryCPF.Text,entryCep.Text,entryRG.Text,entryInformacoes.Text);
         }
     }
 }
