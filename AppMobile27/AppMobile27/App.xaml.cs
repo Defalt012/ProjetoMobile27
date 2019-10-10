@@ -33,6 +33,7 @@ namespace AppMobile27
                 ",Total INTEGER NOT NULL)");
 
             Conexao.Execute("CREATE TABLE IF NOT EXISTS Funcionario (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE" +
+                ",Nome TEXT (200) NOT NULL"+
                 ",CPF TEXT (11) NOT NULL" +
                 ",CEP TEXT (8) NOT NULL" +
                 ",RG TEXT (12) NOT NULL" +

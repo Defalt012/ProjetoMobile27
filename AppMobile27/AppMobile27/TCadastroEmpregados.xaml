@@ -16,6 +16,13 @@
                    Margin="10,5,10,10"
                    Placeholder="ID:"
                    HorizontalTextAlignment="Center"/>
+            
+            <Entry x:Name="entryNome"
+                   HorizontalOptions="FillAndExpand"
+                   Margin="10,5,10,10"
+                   Placeholder="Nome:"
+                   HorizontalTextAlignment="Center"/>
+            
             <StackLayout Orientation="Horizontal">
                 <Entry x:Name="entryCPF"
                  HorizontalOptions="FillAndExpand"
@@ -53,40 +60,20 @@
                     BorderRadius="25"
                     Clicked="ButtonCadastrar_Clicked"/>
                 
-                <Button Text="Atualizar"
-                    BackgroundColor="#FF2950"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="5,25,5,0"
-                    x:Name="buttonAtualizar"
-                    BorderRadius="25"
-                    Clicked="ButtonAtualizar_Clicked"/>
+                
 
-                <Button Text="Delete"
-                    BackgroundColor="#FF2950"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="5,25,5,0"
-                    x:Name="buttonDelete"
-                    BorderRadius="25"
-                    Clicked="ButtonDelete_Clicked"/>
+                
                 
             </StackLayout>
-            <StackLayout>
-                <ListView x:Name="listviewEmpregados">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout>
-                                <Grid>
-                                    <Label Text="{Binding ID}"></Label>
-                                    <Label Text="{Binding CPF}"></Label>
-                                    <Label Text="{Binding RG}"></Label>
-                                    <Label Text="{Binding CEP}"></Label>
-                                    <Label Text="{Binding Observacao}"></Label>
-                                </Grid>
-                            </StackLayout>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
+            <Button Text="Listagem"
+                    BackgroundColor="#FF2950"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5,10,5,0"
+                    x:Name="buttonListagem"
+                    BorderRadius="25"
+                    Clicked="ButtonListagem_Clicked"/>
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

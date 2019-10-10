@@ -136,8 +136,12 @@
 
             <StackLayout  Orientation="Horizontal">
 
+                <Label x:Name="Total"
+                       HorizontalOptions="FillAndExpand"
+                       TextColor="Black"/>
 
-                <Picker x:Name="pickerEmpregado"
+
+                <Picker x:Name="pickerHORA"
                         Title="Selecione o Empregado(a)"
                         HorizontalOptions="FillAndExpand"
                         Margin="10, 5, 10, 5"

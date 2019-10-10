@@ -12,19 +12,14 @@ namespace AppMobile27
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TCadastroEmpregados : ContentPage
     {
-        Classe.CFuncionario CF = new Classe.CFuncionario();
+        
         public TCadastroEmpregados()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            CarregarDados();
+            
         }
-
-        private void CarregarDados()
-        {
-            var itens = CF.SelecionarDados();
-            listviewEmpregados.ItemsSource = itens;
-        }
+        Classe.CFuncionario CF = new Classe.CFuncionario();
 
         private void ButtonCadastrar_Clicked(object sender, EventArgs e)
         {
@@ -36,7 +31,7 @@ namespace AppMobile27
                 !string.IsNullOrEmpty(entryInformacoes.Text))
             {
 
-                bool Inserir = CF.Cadastrar(entryCPF.Text, entryCep.Text, entryRG.Text, entryInformacoes.Text);
+                bool Inserir = CF.Cadastrar(entryNome.Text,entryCPF.Text, entryCep.Text, entryRG.Text, entryInformacoes.Text);
 
 
 
@@ -52,23 +47,11 @@ namespace AppMobile27
 
 
         }
-        private void ButtonAtualizar_Clicked(object sender, EventArgs e)
+        
+
+        private void ButtonListagem_Clicked(object sender, EventArgs e)
         {
-            bool Atualizar = CF.Atualizar(entryCPF.Text, entryCep.Text, entryRG.Text, entryInformacoes.Text,Convert.ToInt32(entryID.Text));
-
-            if (Atualizar == true)
-            {
-                DisplayAlert("Certo","Atualizou com sucesso","OK");
-            }
-            else
-            {
-                DisplayAlert("Erro", "Ocorreu um erro no App", "OK");
-            }
-        }
-
-        private void ButtonDelete_Clicked(object sender, EventArgs e)
-        {
-
+            Navigation.PushAsync(new ListarFuncionarioxaml());
         }
     }
 }

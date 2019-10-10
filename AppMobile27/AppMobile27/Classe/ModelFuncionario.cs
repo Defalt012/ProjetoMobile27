@@ -8,11 +8,13 @@ namespace AppMobile27.Classe
     {
         public int ID { get; set; }
 
+        public int Nome { get; set; }
+
         public string CPF { get; set; }
 
-        public string RG { get; set; }
-
         public string CEP { get; set; }
+
+        public string RG { get; set; }
 
         public string Observacao { get; set; }
     }

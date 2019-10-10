@@ -11,26 +11,21 @@
                         <TableSection>
                             <ViewCell x:Name="PaginaLimpar"
                                       Tapped="PaginaLimpar_Tapped">
-                                <Label Text="Limpar"
+                                <Label Text="Pedido"
                                        HorizontalTextAlignment="Center"/>
 
                             </ViewCell>
 
                             <ViewCell x:Name="PaginaParticipar" Tapped="PaginaParticipar_Tapped">
 
-                                <Label Text="Serviço"
+                                <Label Text="Empregado"
                                        HorizontalTextAlignment="Center"/>
 
                             </ViewCell>
 
-                            <ViewCell x:Name="PaginaPedido"
-                                      Tapped="PaginaPedido_Tapped">
-                                <Label Text="+ Pedido"
-                                       HorizontalOptions="Center"/>
+                            
 
-                            </ViewCell>
-
-                            <ViewCell x:Name="PaginaConta"
+                            <ViewCell x:Name="Conta"
                                       Tapped="PaginaConta_Tapped">
 
                                 <Label Text="Conta"

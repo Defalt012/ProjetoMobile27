@@ -38,6 +38,7 @@
                    HorizontalOptions="FillAndExpand"
                    Margin="1,5,0,0"/>
             </StackLayout>
+            
             <StackLayout Orientation="Horizontal">
                 <Button Text="Criar"
                     BackgroundColor="Transparent"

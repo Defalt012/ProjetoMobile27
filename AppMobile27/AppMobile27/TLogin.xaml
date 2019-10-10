@@ -27,7 +27,7 @@
             <Button Text="Criar conta"
                     TextColor="White"
                     HorizontalOptions="FillAndExpand"
-                    BorderColor="Transparent"
+                    BackgroundColor="Transparent"
                     Margin="5,25,5,0"
                     x:Name="buttonCriarConta"
                     BorderWidth="10"

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using AppMobile27.Classe;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -77,8 +77,11 @@ namespace AppMobile27
             Sala = Convert.ToInt32(labelSala.Text);
             Banheiro = Convert.ToInt32(labelBanheiro.Text);
             Quarto = Convert.ToInt32(labelQuarto.Text);
-            int total = (Cozinha * 30) + (Sala * 30) + (Banheiro * 25) + (Quarto * 25);
-            Navigation.PushAsync(new TPreco());
+            Total.Text = Convert.ToString(((Cozinha * 30) + (Sala * 30) + (Banheiro * 25) + (Quarto * 25)));
+            int Totalr = Convert.ToInt32(Total); 
+
+            CPedido CP = new CPedido();
+            bool Cadastrar = CP.Cadastrar(Quarto, Banheiro, Cozinha, Sala, pickerDia, pickerHORA, pickerFuncionario, Totalr);
 
         }
     }

@@ -8,11 +8,19 @@ namespace AppMobile27.Classe
 {
     public class CUsuario
     {
-
+        /// <summary>
+        /// CADASTRAR USUARIO
+        /// </summary>
+        /// <param name="Nome">nOME DO USUARIO</param>
+        /// <param name="Usuario">CONTA DO USUARIO</param>
+        /// <param name="Email">EMAIL</param>
+        /// <param name="Senha">SENHA</param>
+        /// <param name="CEP">CEP</param>
+        /// <returns></returns>
 
         public bool CadastrarUsuario(string Nome,string Usuario,string Email, string Senha, string CEP)
         {
-
+            
             try
             {
 
@@ -28,6 +36,7 @@ namespace AppMobile27.Classe
 
             }
         }
+
         public bool Update(string Nome, string Usuario, string Email, string Senha, string CEP, int ID)
         {
             try
@@ -42,7 +51,11 @@ namespace AppMobile27.Classe
                 throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
             }
         }
-
+        /// <summary>
+        /// Deleta a informação com o ID
+        /// </summary>
+        /// <param name="ID">ID da informação</param>
+        /// <returns></returns>
         public bool DeleteItem(int ID)
         {
             try
@@ -58,7 +71,12 @@ namespace AppMobile27.Classe
 
             }
         }
-
+        /// <summary>
+        /// Metodo para Login
+        /// </summary>
+        /// <param name="Usuario">Usuario a conta</param>
+        /// <param name="Senha">Senha da conta</param>
+        /// <returns></returns>
         public bool Login(string Usuario, string Senha)
         {
             try

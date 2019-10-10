@@ -4,7 +4,84 @@
              x:Class="AppMobile27.ListarFuncionarioxaml">
     <ContentPage.Content>
         <StackLayout>
-            
+            <ScrollView Orientation="Horizontal">
+                <StackLayout>
+                    <Grid BackgroundColor="Aquamarine">
+                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                               
+                            <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>    
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="300"/>
+
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Text="ID" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="1" Grid.Row="0" Text="Nome" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="2" Grid.Row="0" Text="CPF" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="3" Grid.Row="0" Text="CEP" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="4" Grid.Row="0" Text="RG" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"/>
+                        <Label Grid.Column="5" Grid.Row="0" Text="Observacao" BackgroundColor="Black" TextColor="White" FontAttributes="Bold"/>
+                    </Grid>
+                    <ListView x:Name="listViewFuncionario" BackgroundColor="Aquamarine" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        
+                                        <MenuItem Text="Apagar"
+                                                    x:Name="MenuItemApagarFuncionario"
+                                                    Clicked="MenuItemApagarFuncionario_Clicked"
+                                                    CommandParameter="{Binding .}"
+                                                    IsDestructive="False"/>
+                                        <MenuItem Text="Apagar Tudo"
+                                                    x:Name="MenuItemApagarTudoFuncionario"
+                                                    Clicked="MenuItemApagarTudoFuncionario_Clicked"
+                                                    CommandParameter="{Binding .}"
+                                                    IsDestructive="False"/>
+                                    </ViewCell.ContextActions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="300"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="300"/>
+                                            
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding ID}" TextColor="Black"/>
+                                        <Label Grid.Column="1" Text="{Binding Nome}" TextColor="Black"/>
+                                        <Label Grid.Column="2" Text="{Binding CPF}" TextColor="Black"/>
+                                        <Label Grid.Column="3" Text="{Binding CEP}" TextColor="Black"/>
+                                        <Label Grid.Column="4" Text="{Binding RG}" TextColor="Black"/>
+                                        <Label Grid.Column="5" Text="{Binding Observacao}" TextColor="Black"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text=" Adicionar Funcionario" 
+                        x:Name="buttonAdicionar"
+                        Margin="10,10,10,5"
+                        HorizontalOptions="FillAndExpand"
+                        FontSize="10"
+                        TextColor="Azure"
+                        BorderRadius="8"
+                        Clicked="ButtonAdicionar_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

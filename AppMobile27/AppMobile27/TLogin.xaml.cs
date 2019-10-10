@@ -17,18 +17,24 @@ namespace AppMobile27
 
         private void ButtonLogar_Clicked(object sender, EventArgs e)
         {
-            Classe.CUsuario CU = new Classe.CUsuario();
-            bool Logar = CU.Login(entryNome.Text, entrySenha.Text);
-            if (Logar == true)
-
+            if (!string.IsNullOrEmpty(entryNome.Text)||
+                !string.IsNullOrEmpty(entrySenha.Text))
             {
+
+
+                Classe.CUsuario CU = new Classe.CUsuario();
+                bool Logar = CU.Login(entryNome.Text, entrySenha.Text);
                 Navigation.PushAsync(new MenuStrip());
+
             }
             else
             {
                 DisplayAlert("Erro", "Ocorreu um erro no App", "OK");
             }
+      
+            
         }
+
 
         private void ButtonCriarConta_Clicked(object sender, EventArgs e)
         {
