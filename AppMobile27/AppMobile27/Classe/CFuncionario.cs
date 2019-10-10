@@ -7,13 +7,31 @@ namespace AppMobile27.Classe
 {
     public class CFuncionario
     {
-
+        /// <summary>
+        /// 10102019-SelecionarDados: Metodo de listagem
+        /// </summary>
+        /// <returns>Retorna os itens listado da tabela Funcionario</returns>
         public List<ModelFuncionario> SelecionarDados()
         {
-            var itens = ((App)Application.Current).Conexao.Query<ModelFuncionario>("SELECT * FROM Funcionario");
-            return itens;
+            try
+            {
+                var itens = ((App)Application.Current).Conexao.Query<ModelFuncionario>("SELECT * FROM Funcionario");
+                return itens;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Houve um erro ao listar.\nDetalhes:" + ex.Message);
+            }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="CPF">CPF DO FUNCIONARIO</param>
+        /// <param name="CEP">CEP DO FUNCIONARIO</param>
+        /// <param name="RG">RG DO FUNCIONARIO</param>
+        /// <param name="Observacao">OBSERVAÇÃO DO FUNCIONARIO</param>
+        /// <returns></returns>
         public bool Cadastrar(string CPF, string CEP, string RG, string Observacao)
         {
             try
@@ -22,12 +40,13 @@ namespace AppMobile27.Classe
                 ((App)Application.Current).Conexao.Execute(query);
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
             }
         }
-        public bool Atualizar(string CPF, string CEP, string RG, string Observacao,int ID)
+
+        public bool Atualizar(string CPF, string CEP, string RG, string Observacao, int ID)
         {
             try
             {
@@ -36,9 +55,25 @@ namespace AppMobile27.Classe
 
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception("Houve um erro ao inserir\nDetalhes:" + ex.Message);
+
+            }
+
+        }
+
+        public bool Deletar(int ID)
+        {
+            try
+            {
+                var query = $"DELETE FROM Funcionario WHERE ID = {ID}";
+                ((App)Application.Current).Conexao.Execute(query);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao deletar.\nDetalhes:" + ex.Message);
             }
         }
     }

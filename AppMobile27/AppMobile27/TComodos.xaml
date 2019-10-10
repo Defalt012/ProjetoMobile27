@@ -7,7 +7,7 @@
         <StackLayout>
             <Label Text="Cômodos"
              HorizontalOptions="Center"
-             Margin="5,30,5,0"
+             Margin="5,10,5,0"
              FontSize="20"
              TextColor="#0DFFBB"/>
 
@@ -18,7 +18,8 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair1"
-                        TextColor="#0D3FFF"/>
+                        TextColor="#0D3FFF"
+                        Clicked="ButtonSubtrair1_Clicked"/>
                 <Button Text="QUARTO"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
@@ -31,13 +32,14 @@
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma1"
-                        TextColor="#0D3FFF"/>
+                        TextColor="#005E80"
+                        Clicked="ButtonSoma1_Clicked"/>
             </StackLayout>
 
-            <Label Text="(1)"
+            <Label Text="(0)"
                    HorizontalOptions="CenterAndExpand"
                    x:Name="labelQuarto"
-                   TextColor="Black"/>
+                   TextColor="#005E80"/>
 
             <StackLayout Orientation="Horizontal">
                 <Button Text="-"
@@ -46,26 +48,29 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair2"
-                        TextColor="#0D3FFF"/>
+                        TextColor="#005E80"
+                        Clicked="ButtonSubtrair2_Clicked"/>
                 <Button Text="BANHEIRO"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
                     TextColor="Black"
                     FontSize="15"/>
+                
                 <Button Text="+"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma2"
-                        TextColor="#0D3FFF"/>
+                    TextColor="#005E80"
+                    Clicked="ButtonSoma2_Clicked"/>
             </StackLayout>
 
-            <Label Text="(1)"
+            <Label Text="(0)"
                    HorizontalOptions="CenterAndExpand"
                    x:Name="labelBanheiro"
-                   TextColor="Black"/>
+                   TextColor="#005E80"/>
 
             <StackLayout Orientation="Horizontal">
                 <Button Text="-"
@@ -74,7 +79,8 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair3"
-                    TextColor="#0D3FFF"/>
+                    TextColor="#005E80"
+                    Clicked="ButtonSubtrair3_Clicked"/>
                 <Button Text="SALA"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
@@ -87,12 +93,13 @@
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma3"
-                    TextColor="#0D3FFF"/>
+                    TextColor="#005E80"
+                    Clicked="ButtonSoma3_Clicked"/>
             </StackLayout>
 
             <Label Text="(1)"
                    HorizontalOptions="CenterAndExpand"
-                   TextColor="Black"
+                   TextColor="#005E80"
                    x:Name="labelSala"/>
 
             <StackLayout Orientation="Horizontal">
@@ -102,24 +109,29 @@
                     Margin="0,25,0,0"
                     FontSize="20"
                     x:Name="buttonSubtrair4"
-                        TextColor="#0D3FFF"/>
+                    TextColor="#005E80"
+                    Clicked="ButtonSubtrair4_Clicked"/>
+                
                 <Button Text="COZINHA"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
                     TextColor="Black"
                     FontSize="15"/>
+                
                 <Button Text="+"
                     BackgroundColor="Transparent"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,25,0,0"
                     FontSize="15"
                     x:Name="buttonSoma4"
-                        TextColor="#0D3FFF"/>
+                    TextColor="#005E80"
+                    Clicked="ButtonSoma4_Clicked"/>
+                
             </StackLayout>
             <Label Text="(1)"
                    HorizontalOptions="CenterAndExpand"
-                   TextColor="Black"
+                   TextColor="#005E80"
                    x:Name="labelCozinha"/>
 
             <StackLayout  Orientation="Horizontal">
@@ -129,7 +141,7 @@
                         Title="Selecione o Empregado(a)"
                         HorizontalOptions="FillAndExpand"
                         Margin="10, 5, 10, 5"
-                        TextColor="Black">
+                        TextColor="#005E80">
                     <Picker.Items>
 
                         <x:String>8:00 Horas</x:String>
@@ -152,7 +164,7 @@
                         Title="Selecione o Dia(a)"
                         HorizontalOptions="FillAndExpand"
                         Margin="10, 5, 10, 5"
-                        TextColor="Black">
+                        TextColor="#005E80">
                     <Picker.Items>
 
                         <x:String>01/10/2019</x:String>
@@ -188,9 +200,34 @@
                     </Picker.Items>
                 </Picker>
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="pickerFuncionario"
+                        Title="Selecione o Funcionario(a)"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="10, 5, 10, 5"
+                        TextColor="#005E80">
+                    <Picker.Items>
+
+                        <x:String>João</x:String>
+                        <x:String>Matheus</x:String>
+                        <x:String>Lucas</x:String>
+                        <x:String>Luiz</x:String>
+                        
+                    </Picker.Items>
+                </Picker>
 
 
-            <ImageButton Margin="0,70,0,0"/>
+
+                <Button x:Name="buttonProximo"
+                    HorizontalOptions="End"
+                    BackgroundColor="Transparent"
+                    Text=">>"
+                    FontSize="25"
+                    TextColor="#005E80"
+                    Clicked="ButtonProximo_Clicked"/>
+            </StackLayout>
+
+            
 
 
         </StackLayout>
